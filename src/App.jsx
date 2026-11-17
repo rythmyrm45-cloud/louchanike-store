@@ -1,3 +1,4 @@
+
 import royalLogo from './assets/royal-logo.png';
 import { useState, useEffect, useRef } from 'react';
 import './App.css';
@@ -5,6 +6,13 @@ import './App.css';
 import product1 from './assets/product1.png';
 import product2 from './assets/product2.png';
 import product3 from './assets/product3.png';
+import product4 from './assets/product4.png';
+import product13 from './assets/product13.png';
+import product22 from './assets/product22.png';
+import product31 from './assets/product31.png';
+import product40 from './assets/product40.png';
+import product49 from './assets/product49.png';
+
 
 const categories = [
   'Necklaces',
@@ -51,10 +59,65 @@ const originalProducts = [
     category: 'Necklaces',
     description:
       'A beautiful traditional statement necklace for timeless elegance. Style it for festive occasions and celebrations.',
+    price: 799,
   },
+  {
+    id: 4,
+    name: 'Traditional Statement Necklace',
+    image: product3,
+    category: 'Necklaces',
+    description:
+      'A beautiful traditional statement necklace for timeless elegance. Style it for festive occasions and celebrations.',
+  },
+  {
+  id: 13,
+  name: 'Antique Gold Floral Motif Necklace Set',
+  price: 799,
+  image: product13,
+  category: 'Necklaces',
+  description:
+    'A stunning antique-finish gold choker featuring intricate spherical beadwork and floral motifs accented with ruby-red and emerald-green stones. Complete with matching stud earrings, perfect for traditional festive wear.',
+},
+{
+  id: 22,
+  name: 'Minimalist Gold Heart Pendant Necklace',
+  price: 299,
+  image: product22,
+  category: 'Necklaces',
+  description:
+    'A delicate and elegant everyday necklace featuring a polished, classic gold heart pendant on a fine chain. A timeless piece for a subtle touch of romance and sophistication.',
+},
+{
+  id: 31,
+  name: 'Ornate Temple Style Bridal Necklace Set',
+  price: 1299,
+  image: product31,
+  category: 'Necklaces',
+  description:
+    'An elaborate, heavy gold-tone bridal necklace featuring intricate filigree work, layered floral patterns, and vibrant ruby and emerald stone accents. Paired with large matching chandelier earrings for a majestic look.',
+},
+{
+  id: 40,
+  name: 'Classic Pearl & Ruby Choker Set',
+  price: 599,
+  image: product40,
+  category: 'Necklaces',
+  description:
+    'A sophisticated pearl necklace featuring a central geometric gold-toned pendant set with a deep red ruby stone and sparkling white crystals. Includes matching jhumka-style earrings with emerald green centers.',
+},
+{
+  id: 49,
+  name: 'Peacock Motif Kundan Choker Set',
+  price: 1099,
+  image: product49,
+  category: 'Necklaces',
+  description:
+    'A magnificent traditional choker featuring an ornate central medallion flanked by elegant peacock motifs. Embellished with rich red kundan stones, clear crystals, and delicate pearl drop detailing, accompanied by matching statement earrings.',
+},
 ];
 
-const placeholderProducts = Array.from({ length: 30 }, (_, index) => {
+
+const placeholderProducts = Array.from({ length: 48 }, (_, index) => {
   const id = index + 4;
   const category = categories[index % categories.length];
 
@@ -70,6 +133,7 @@ const placeholderProducts = Array.from({ length: 30 }, (_, index) => {
 });
 
 const products = [...originalProducts, ...placeholderProducts];
+
 
 function ProductImage({ product, className = '' }) {
   if (product.image) {
@@ -91,6 +155,7 @@ function ProductImage({ product, className = '' }) {
   );
 }
 
+
 function App() {
   const [cart, setCart] = useState([]);
   const [cartOpen, setCartOpen] = useState(false);
@@ -98,8 +163,8 @@ function App() {
   const [wishlistOpen, setWishlistOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [sortOrder, setSortOrder] = useState('recommended');
-  const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchTerm, setSearchTerm] = useState('');
 
   const categoryTrackRef = useRef(null);
 
@@ -114,6 +179,7 @@ function App() {
       if (product) setSelectedProduct(product);
     }
   }, []);
+
 
   const formatPrice = (price) =>
     '₹' + price.toLocaleString('en-IN');
@@ -257,28 +323,16 @@ function App() {
 
       {/* HEADER */}
       <header className="header">
-        <a href="#home" className="logo">
-<span className="logo-symbol">
-  <img src={royalLogo} alt="Royal Bloom Logo" />
-</span>          <span className="logo-name">LOUCHANIKE</span>
-          <span className="logo-subtitle">ROYAL BLOOM</span>
-        </a>
+       
+<a href="#home" className="logo">
+  <span className="logo-symbol">
+    <img src={royalLogo} alt="LOUCHANIKE Logo" />
+  </span>
+  <span className="logo-name">LOUCHANIKE</span>
+</a>
 
-        <div className="header-search">
-          <input
-            type="search"
-            placeholder="Search for earrings, necklaces, rings..."
-            value={searchTerm}
-            onChange={(event) => {
-              setSearchTerm(event.target.value);
-              document.getElementById('products')?.scrollIntoView({
-                behavior: 'smooth',
-              });
-            }}
-          />
-          <span>⌕</span>
-        </div>
 
+      
         <div className="header-actions">
           <button
             className="header-action"
@@ -341,120 +395,48 @@ function App() {
         <a href="#contact">Contact</a>
       </nav>
 
-      <main id="home">
+<main id="home">
 
-        {/* HERO */}
-        <section className="hero">
-          <div className="hero-content">
-            <span className="hero-flower">✧ ROYAL BLOOM ✧</span>
-            <p className="eyebrow">THE BEAUTY OF TRADITION</p>
+  {/* PRODUCTS */}
+  <section className="products" id="products">
 
-            <h1>
-              A Touch of
-              <br />
-              <span>Royal Elegance.</span>
-            </h1>
-
-            <p className="hero-description">
-              Discover jewellery that makes every moment bloom.
-              Celebrate your beauty with timeless designs.
-            </p>
-
-            <a className="shop-button" href="#products">
-              SHOP COLLECTION <span>→</span>
-            </a>
-          </div>
-
-          <div className="hero-image">
-            <img src={product2} alt="LOUCHANIKE royal jewellery collection" />
-          </div>
-
-          <div className="hero-dots">
-            <span className="active"></span>
-            <span></span>
-            <span></span>
-          </div>
-        </section>
-
-        {/* COLLECTIONS */}
-     
-{/* COLLECTIONS */}
-<section className="collections" id="collections">
-  <div className="section-heading">
-    <p className="eyebrow">CURATED FOR YOU</p>
-    <h2>Explore Our Collections</h2>
-    <span className="heading-ornament">✧</span>
-  </div>
-
-  <div className="category-heading-row">
-    <div className="category-heading-text">
-      <h3>Shop by Category</h3>
-      <p>Find your perfect style</p>
-    </div>
-
-    <div className="category-arrows">
-      <button
-        type="button"
-        aria-label="Scroll categories left"
-        onClick={() => scrollCategories(-1)}
-      >
-        ←
-      </button>
-      <button
-        type="button"
-        aria-label="Scroll categories right"
-        onClick={() => scrollCategories(1)}
-      >
-        →
-      </button>
-    </div>
-  </div>
+<div className="category-carousel">
+  <button
+    type="button"
+    className="category-arrow category-arrow-left"
+    onClick={() => scrollCategories(-1)}
+    aria-label="Scroll categories left"
+  >
+    &#10094;
+  </button>
 
   <div className="category-circle-track" ref={categoryTrackRef}>
     {categories.map((category, index) => (
       <button
         type="button"
-        className="category-circle-card"
+        className={`category-circle-card ${
+          selectedCategory === category ? 'active' : ''
+        }`}
         key={category}
-        onClick={() => {
-          chooseCategory(category);
-          document.getElementById('products')?.scrollIntoView({
-            behavior: 'smooth',
-          });
-        }}
+        onClick={() => chooseCategory(category)}
       >
         <div className="category-circle-image">
-          <img
-            src={categoryImages[index]}
-            alt={category}
-            loading="lazy"
-          />
+          <img src={categoryImages[index]} alt={category} />
         </div>
-
-        <span className="category-circle-name">
-          {category}
-        </span>
+        <span className="category-circle-name">{category}</span>
       </button>
     ))}
   </div>
 
-  <p className="category-scroll-hint">
-    SWIPE TO EXPLORE MORE COLLECTIONS →
-  </p>
-</section>
-
-          
-
-        {/* PRODUCTS */}
-        <section className="products" id="products">
-          <div className="section-heading">
-            <p className="eyebrow">HANDPICKED BEAUTY</p>
-            <h2>Our Bestsellers</h2>
-            <span className="heading-ornament">✧</span>
-            <p className="section-description">
-              Beautiful designs for your unforgettable moments.
-            </p>
-          </div>
+  <button
+    type="button"
+    className="category-arrow category-arrow-right"
+    onClick={() => scrollCategories(1)}
+    aria-label="Scroll categories right"
+  >
+    &#10095;
+  </button>
+</div>
 
           <div className="search-box">
             <input
@@ -468,6 +450,7 @@ function App() {
           <div className="category-filters">
             {['All', ...categories].map((category) => (
               <button
+                type="button"
                 key={category}
                 className={selectedCategory === category ? 'active' : ''}
                 onClick={() => chooseCategory(category)}
@@ -512,11 +495,16 @@ function App() {
                     </button>
 
                     <button
+                      type="button"
                       className={`wishlist-button ${
                         isWishlisted(product.id) ? 'saved' : ''
                       }`}
                       onClick={() => toggleWishlist(product)}
-                      aria-label="Add to wishlist"
+                      aria-label={
+                        isWishlisted(product.id)
+                          ? 'Remove from wishlist'
+                          : 'Add to wishlist'
+                      }
                     >
                       {isWishlisted(product.id) ? '♥' : '♡'}
                     </button>
@@ -544,6 +532,7 @@ function App() {
                     </p>
 
                     <button
+                      type="button"
                       className="product-details-button"
                       onClick={() => setSelectedProduct(product)}
                     >
@@ -551,6 +540,7 @@ function App() {
                     </button>
 
                     <button
+                      type="button"
                       className="shop-button product-add-button"
                       onClick={() => addToCart(product)}
                       disabled={product.isPlaceholder}
@@ -559,6 +549,7 @@ function App() {
                     </button>
 
                     <button
+                      type="button"
                       className="view-button"
                       onClick={() => addToCart(product)}
                       disabled={product.isPlaceholder}
@@ -567,6 +558,7 @@ function App() {
                     </button>
 
                     <button
+                      type="button"
                       className="share-button"
                       onClick={() => shareProduct(product)}
                     >
@@ -641,9 +633,10 @@ function App() {
       {/* FOOTER */}
       <footer id="contact">
         <div className="footer-brand">
-<span className="logo-symbol footer-logo">
-  <img src={royalLogo} alt="ROYAL BLOOM Logo" />
-</span>          <div className="logo-name">LOUCHANIKE</div>
+          <span className="logo-symbol footer-logo">
+            <img src={royalLogo} alt="ROYAL BLOOM Logo" />
+          </span>
+          <div className="logo-name">LOUCHANIKE</div>
           <span className="logo-subtitle">ROYAL BLOOM</span>
           <p>ELEGANCE IN EVERY DETAIL</p>
         </div>
@@ -670,29 +663,34 @@ function App() {
         </small>
       </footer>
 
-      {/* PRODUCT DETAILS */}
+      {/* PRODUCT DETAILS MODAL */}
       {selectedProduct && (
         <div
           className="details-overlay"
           onClick={() => setSelectedProduct(null)}
         >
           <div
-            className="details-panel"
+            className="details"
             onClick={(event) => event.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Product details"
           >
             <button
+              type="button"
               className="close-cart"
               onClick={() => setSelectedProduct(null)}
+              aria-label="Close product details"
             >
               ✕
             </button>
 
-            <ProductImage
-              product={selectedProduct}
-              className="details-image"
-            />
+            <div className="details-image">
+              <ProductImage product={selectedProduct} />
+            </div>
 
             <p className="eyebrow">{selectedProduct.category}</p>
+
             <h2>{selectedProduct.name}</h2>
 
             <h3 className="product-price">
@@ -705,6 +703,7 @@ function App() {
 
             {!selectedProduct.isPlaceholder && (
               <button
+                type="button"
                 className="shop-button"
                 onClick={() => {
                   addToCart(selectedProduct);
@@ -716,6 +715,7 @@ function App() {
             )}
 
             <button
+              type="button"
               className="view-button"
               onClick={() => toggleWishlist(selectedProduct)}
             >
@@ -725,6 +725,7 @@ function App() {
             </button>
 
             <button
+              type="button"
               className="share-button"
               onClick={() => shareProduct(selectedProduct)}
             >
@@ -745,6 +746,7 @@ function App() {
             onClick={(event) => event.stopPropagation()}
           >
             <button
+              type="button"
               className="close-cart"
               onClick={() => setWishlistOpen(false)}
             >
@@ -772,6 +774,7 @@ function App() {
 
                       {!item.isPlaceholder && (
                         <button
+                          type="button"
                           className="shop-button"
                           onClick={() => {
                             addToCart(item);
@@ -783,6 +786,7 @@ function App() {
                       )}
 
                       <button
+                        type="button"
                         className="remove-button"
                         onClick={() => toggleWishlist(item)}
                       >
@@ -808,6 +812,7 @@ function App() {
             onClick={(event) => event.stopPropagation()}
           >
             <button
+              type="button"
               className="close-cart"
               onClick={() => setCartOpen(false)}
             >
@@ -831,16 +836,27 @@ function App() {
                         <p>{formatPrice(item.price)}</p>
 
                         <div className="quantity-controls">
-                          <button onClick={() => updateQuantity(item.id, -1)}>
+                          <button
+                            type="button"
+                            onClick={() => updateQuantity(item.id, -1)}
+                            aria-label="Decrease quantity"
+                          >
                             −
                           </button>
+
                           <span>{item.quantity}</span>
-                          <button onClick={() => updateQuantity(item.id, 1)}>
+
+                          <button
+                            type="button"
+                            onClick={() => updateQuantity(item.id, 1)}
+                            aria-label="Increase quantity"
+                          >
                             +
                           </button>
                         </div>
 
                         <button
+                          type="button"
                           className="remove-button"
                           onClick={() => removeFromCart(item.id)}
                         >
@@ -857,6 +873,7 @@ function App() {
                 </div>
 
                 <button
+                  type="button"
                   className="shop-button checkout-button"
                   onClick={() =>
                     alert('Checkout will be connected soon!')
@@ -874,4 +891,3 @@ function App() {
 }
 
 export default App;
-12
