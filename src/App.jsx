@@ -58,6 +58,18 @@ import bangle6 from './assets/bangles-set/bangles6.png';
 import bangle7 from './assets/bangles-set/bangles7.png';
 import bangle8 from './assets/bangles-set/bangles8.png';
 
+// NEW: Bracelets Images Imports (10 Images)
+import bracelet1 from './assets/bracelets.png/bracelets1.png';
+import bracelet2 from './assets/bracelets.png/bracelets2.png';
+import bracelet3 from './assets/bracelets.png/bracelets3.png';
+import bracelet4 from './assets/bracelets.png/bracelets4.png';
+import bracelet5 from './assets/bracelets.png/bracelets5.png';
+import bracelet6 from './assets/bracelets.png/bracelets6.png';
+import bracelet7 from './assets/bracelets.png/bracelets7.png';
+import bracelet8 from './assets/bracelets.png/bracelets8.png';
+import bracelet9 from './assets/bracelets.png/bracelets9.png';
+import bracelet10 from './assets/bracelets.png/bracelets10.png';
+
 const categories = [
   'Necklaces',
   'Jewellery Sets',
@@ -361,16 +373,97 @@ const originalProducts = [
     image: bangle8,
     category: 'Bangles',
     description: 'A gorgeous gold bangle featuring delicate green stone accents and elegant leaf motifs.',
-  }
+  },
+  {
+    id: 35,
+    name: 'Golden Grace Chain Bracelet',
+    price: 380,
+    image: bracelet1,
+    category: 'Bracelets',
+    description: 'A delicate gold-toned chain bracelet featuring subtle dark bead accents, perfect for adding a touch of everyday elegance.',
+  },
+{
+  id: 36,
+  name: 'Classic Solitaire Silver Bracelet',
+  price: 450,
+  image: bracelet2,
+  category: 'Bracelets',
+  description: 'An elegant silver-toned bracelet featuring a brilliant central stone, offering a timeless and sophisticated look.',
+},
+{
+  id: 37,
+  name: 'Sparkling Crystal Tennis Bracelet',
+  price: 520,
+  image: bracelet3,
+  category: 'Bracelets',
+  description: 'A stunning classic tennis bracelet adorned with sparkling crystals, designed to catch the light beautifully for evening wear.',
+},
+{
+  id: 38,
+  name: 'Minimalist Silver Link Bracelet',
+  price: 340,
+  image: bracelet4,
+  category: 'Bracelets',
+  description: 'A sleek and minimalist silver link bracelet, ideal for daily wear or layering with your favorite accessories.',
+},
+{
+  id: 39,
+  name: 'Twisted Elegance Silver Bracelet',
+  price: 390,
+  image: bracelet5,
+  category: 'Bracelets',
+  description: 'A beautifully crafted silver bracelet featuring a twisted rope design that adds texture and modern flair to any outfit.',
+},
+{
+  id: 40,
+  name: 'Emerald Green Beaded Bracelet',
+  price: 420,
+  image: bracelet6,
+  category: 'Bracelets',
+  description: 'A striking bracelet featuring deep green stones and gold accents, bringing a vibrant pop of color to your jewellery collection.',
+},
+{
+  id: 41,
+  name: 'Delicate Pearl Gold Chain',
+  price: 360,
+  image: bracelet7,
+  category: 'Bracelets',
+  description: 'A graceful gold chain bracelet dotted with delicate pearl-like accents, exuding classic charm and femininity.',
+},
+{
+  id: 42,
+  name: 'Timeless Silver Chain Bracelet',
+  price: 330,
+  image: bracelet8,
+  category: 'Bracelets',
+  description: 'A versatile and classic silver chain bracelet that serves as a perfect staple piece for any jewellery lover.',
+},
+{
+  id: 43,
+  name: 'Golden Crescent Charm Bracelet',
+  price: 410,
+  image: bracelet9,
+  category: 'Bracelets',
+  description: 'A unique gold-toned bracelet featuring a distinct curved charm design, perfect for a subtle statement.',
+},
+{
+  id: 44,
+  name: 'Textured Woven Silver Bracelet',
+  price: 370,
+  image: bracelet10,
+  category: 'Bracelets',
+  description: 'A beautifully textured silver-toned bracelet with a woven pattern, adding a touch of intricate elegance to your wrist.',
+},
 ];
 
 // Exclude categories that already have real products to prevent fake placeholders
 const placeholderCategories = categories.filter(
-  cat => cat !== 'Necklaces' && cat !== 'Jewellery Sets' && cat !== 'Earrings' && cat !== 'Bangles'
+  cat => cat !== 'Necklaces' && cat !== 'Jewellery Sets' && cat !== 'Earrings' && cat !== 'Bangles' && cat !== 'Bracelets'
 );
 
 const placeholderProducts = Array.from({ length: 48 }, (_, index) => {
-  const id = index + 35; // Starts after the 34 real products
+  const id = index + 45; // Starts after the 44 real products
+  // ...// Starts after the 34 real products
   const category = placeholderCategories[index % placeholderCategories.length];
 
   return {
