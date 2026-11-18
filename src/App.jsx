@@ -40,13 +40,23 @@ import jewellery4 from './assets/jewellery-sets/jewellery4.png';
 import jewellery5 from './assets/jewellery-sets/jewellery5.png';
 import jewellery6 from './assets/jewellery-sets/jewellery6.png';
 
-// NEW: Earrings Images Imports (6 Images)
+// Earrings Images Imports (6 Images)
 import earring1 from './assets/earring-sets/earring1.png';
 import earring2 from './assets/earring-sets/earring2.png';
 import earring3 from './assets/earring-sets/earring3.png';
 import earring4 from './assets/earring-sets/earring4.png';
 import earring5 from './assets/earring-sets/earring5.png';
 import earring6 from './assets/earring-sets/earring6.png';
+
+// NEW: Bangles Images Imports (8 Images)
+import bangle1 from './assets/bangles-set/bangles1.png';
+import bangle2 from './assets/bangles-set/bangles2.png';
+import bangle3 from './assets/bangles-set/bangles3.png';
+import bangle4 from './assets/bangles-set/bangles4.png';
+import bangle5 from './assets/bangles-set/bangles5.png';
+import bangle6 from './assets/bangles-set/bangles6.png';
+import bangle7 from './assets/bangles-set/bangles7.png';
+import bangle8 from './assets/bangles-set/bangles8.png';
 
 const categories = [
   'Necklaces',
@@ -285,16 +295,82 @@ const originalProducts = [
     image: earring6,
     category: 'Earrings',
     description: 'Traditional gold-toned earrings featuring delicate pearl drops, adding a touch of classic grace to any outfit.',
+  },
+
+  // --- 8 BANGLES ---
+  {
+    id: 27,
+    name: 'Textured Gold Stackable Bangles',
+    price: 580,
+    image: bangle1,
+    category: 'Bangles',
+    description: 'A set of thick, intricately textured gold bangles that add a bold, traditional statement to your look.',
+  },
+  {
+    id: 28,
+    name: 'Ornate Filigree Gold Kada',
+    price: 550,
+    image: bangle2,
+    category: 'Bangles',
+    description: 'A beautifully crafted openable gold kada featuring detailed filigree work and a classic antique finish.',
+  },
+  {
+    id: 29,
+    name: 'Diamond-Cut Broad Gold Bangle',
+    price: 600,
+    image: bangle3,
+    category: 'Bangles',
+    description: 'A striking broad bangle with a brilliant diamond-cut texture that catches and reflects light beautifully.',
+  },
+  {
+    id: 30,
+    name: 'Delicate Stone Accent Bangle',
+    price: 420,
+    image: bangle4,
+    category: 'Bangles',
+    description: 'A slender gold bangle featuring a subtle, elegant stone accent, ideal for stacking or wearing alone.',
+  },
+  {
+    id: 31,
+    name: 'Classic Black & White Stone Bangles',
+    price: 490,
+    image: bangle5,
+    category: 'Bangles',
+    description: 'Elegant gold bangles adorned with contrasting black and white stones, offering a chic and versatile look.',
+  },
+  {
+    id: 32,
+    name: 'Intricate Silver Finish Kada',
+    price: 520,
+    image: bangle6,
+    category: 'Bangles',
+    description: 'A heavy, beautifully detailed kada with a sparkling silver finish, perfect for festive occasions.',
+  },
+  {
+    id: 33,
+    name: 'Antique Embossed Gold Bangle',
+    price: 590,
+    image: bangle7,
+    category: 'Bangles',
+    description: 'A wide gold bangle featuring traditional embossed patterns, adding a touch of royal heritage to your wrist.',
+  },
+  {
+    id: 34,
+    name: 'Emerald Green Leaf Motif Bangle',
+    price: 480,
+    image: bangle8,
+    category: 'Bangles',
+    description: 'A gorgeous gold bangle featuring delicate green stone accents and elegant leaf motifs.',
   }
 ];
 
 // Exclude categories that already have real products to prevent fake placeholders
 const placeholderCategories = categories.filter(
-  cat => cat !== 'Necklaces' && cat !== 'Jewellery Sets' && cat !== 'Earrings'
+  cat => cat !== 'Necklaces' && cat !== 'Jewellery Sets' && cat !== 'Earrings' && cat !== 'Bangles'
 );
 
 const placeholderProducts = Array.from({ length: 48 }, (_, index) => {
-  const id = index + 27; // Starts after the 26 real products
+  const id = index + 35; // Starts after the 34 real products
   const category = placeholderCategories[index % placeholderCategories.length];
 
   return {
