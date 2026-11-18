@@ -1,18 +1,52 @@
-
 import royalLogo from './assets/royal-logo.png';
 import { useState, useEffect, useRef } from 'react';
 import './App.css';
 
-import product1 from './assets/product1.png';
-import product2 from './assets/product2.png';
+// Product Import (Kept only for the About Section image)
 import product3 from './assets/product3.png';
-import product4 from './assets/product4.png';
-import product13 from './assets/product13.png';
-import product22 from './assets/product22.png';
-import product31 from './assets/product31.png';
-import product40 from './assets/product40.png';
-import product49 from './assets/product49.png';
 
+// Category Images Imports
+import catAnklets from './assets/Category Images/cat-anklets.png';
+import catBangles from './assets/Category Images/cat-bangles.png';
+import catBracelet from './assets/Category Images/cat-bracelet.png';
+import catBridal from './assets/Category Images/cat-bridal.png';
+import catEarrings from './assets/Category Images/cat-earrings.png';
+import catJewellery from './assets/Category Images/cat-jewellery.png';
+import catMangalsutra from './assets/Category Images/cat-mangalsutra.png';
+import catNecklaces from './assets/Category Images/cat-necklaces.png';
+import catRings from './assets/Category Images/cat-rings.png';
+
+// Necklace Images Imports (14 Images)
+import necklace1 from './assets/Necklace Images/necklace1.png';
+import necklace2 from './assets/Necklace Images/necklace2.png';
+import necklace3 from './assets/Necklace Images/necklace3.png';
+import necklace4 from './assets/Necklace Images/necklace4.png';
+import necklace5 from './assets/Necklace Images/necklace5.png';
+import necklace6 from './assets/Necklace Images/necklace6.png';
+import necklace7 from './assets/Necklace Images/necklace7.png';
+import necklace8 from './assets/Necklace Images/necklace8.png';
+import necklace9 from './assets/Necklace Images/necklace9.png';
+import necklace10 from './assets/Necklace Images/necklace10.png';
+import necklace11 from './assets/Necklace Images/necklace11.png';
+import necklace12 from './assets/Necklace Images/necklace12.png';
+import necklace13 from './assets/Necklace Images/necklace13.png';
+import necklace14 from './assets/Necklace Images/necklace14.png';
+
+// Jewellery Sets Images Imports (6 Images)
+import jewellery1 from './assets/jewellery-sets/jewellery1.png';
+import jewellery2 from './assets/jewellery-sets/jewellery2.png';
+import jewellery3 from './assets/jewellery-sets/jewellery3.png';
+import jewellery4 from './assets/jewellery-sets/jewellery4.png';
+import jewellery5 from './assets/jewellery-sets/jewellery5.png';
+import jewellery6 from './assets/jewellery-sets/jewellery6.png';
+
+// NEW: Earrings Images Imports (6 Images)
+import earring1 from './assets/earring-sets/earring1.png';
+import earring2 from './assets/earring-sets/earring2.png';
+import earring3 from './assets/earring-sets/earring3.png';
+import earring4 from './assets/earring-sets/earring4.png';
+import earring5 from './assets/earring-sets/earring5.png';
+import earring6 from './assets/earring-sets/earring6.png';
 
 const categories = [
   'Necklaces',
@@ -27,99 +61,241 @@ const categories = [
 ];
 
 const categoryImages = [
-  product2, product1, product3,
-  product2, product1, product3,
-  product1, product2, product3,
+  catNecklaces, 
+  catJewellery, 
+  catEarrings, 
+  catBangles, 
+  catBracelet, 
+  catRings, 
+  catBridal, 
+  catMangalsutra, 
+  catAnklets
 ];
 
 const originalProducts = [
+  // --- 14 NECKLACES ---
   {
     id: 1,
-    name: 'Peacock Elegance Choker Set',
-    price: 999,
-    image: product1,
-    category: 'Jewellery Sets',
-    description:
-      'An elegant peacock-inspired necklace set with beautiful traditional detailing. A lovely choice for celebrations and special occasions.',
+    name: 'Royal Antique Gold Choker Set',
+    price: 550,
+    image: necklace1,
+    category: 'Necklaces',
+    description: 'A majestic antique gold choker paired with matching earrings. Intricate detailing perfect for weddings and grand celebrations.',
   },
   {
     id: 2,
-    name: 'Royal Gold Long Haram',
-    price: 1299,
-    image: product2,
+    name: 'Classic Gold Heart Pendant',
+    price: 350,
+    image: necklace2,
     category: 'Necklaces',
-    description:
-      'A royal long haram designed to make every occasion special. Its traditional look adds elegance to your outfit.',
+    description: 'A timeless and minimal gold heart pendant on a delicate chain. Ideal for everyday elegance and subtle sophistication.',
   },
   {
     id: 3,
-    name: 'Traditional Statement Necklace',
-    price: 799,
-    image: product3,
+    name: 'Ornate Filigree Gold Choker',
+    price: 599,
+    image: necklace3,
     category: 'Necklaces',
-    description:
-      'A beautiful traditional statement necklace for timeless elegance. Style it for festive occasions and celebrations.',
-    price: 799,
+    description: 'Exquisitely crafted heavy gold choker featuring traditional filigree work that adds a touch of royal heritage to any outfit.',
   },
   {
     id: 4,
-    name: 'Traditional Statement Necklace',
-    image: product3,
+    name: 'Ruby & Emerald Temple Necklace',
+    price: 580,
+    image: necklace4,
     category: 'Necklaces',
-    description:
-      'A beautiful traditional statement necklace for timeless elegance. Style it for festive occasions and celebrations.',
+    description: 'A stunning temple-style necklace adorned with vibrant ruby and emerald stones, perfect for festive and traditional occasions.',
   },
   {
-  id: 13,
-  name: 'Antique Gold Floral Motif Necklace Set',
-  price: 799,
-  image: product13,
-  category: 'Necklaces',
-  description:
-    'A stunning antique-finish gold choker featuring intricate spherical beadwork and floral motifs accented with ruby-red and emerald-green stones. Complete with matching stud earrings, perfect for traditional festive wear.',
-},
-{
-  id: 22,
-  name: 'Minimalist Gold Heart Pendant Necklace',
-  price: 299,
-  image: product22,
-  category: 'Necklaces',
-  description:
-    'A delicate and elegant everyday necklace featuring a polished, classic gold heart pendant on a fine chain. A timeless piece for a subtle touch of romance and sophistication.',
-},
-{
-  id: 31,
-  name: 'Ornate Temple Style Bridal Necklace Set',
-  price: 1299,
-  image: product31,
-  category: 'Necklaces',
-  description:
-    'An elaborate, heavy gold-tone bridal necklace featuring intricate filigree work, layered floral patterns, and vibrant ruby and emerald stone accents. Paired with large matching chandelier earrings for a majestic look.',
-},
-{
-  id: 40,
-  name: 'Classic Pearl & Ruby Choker Set',
-  price: 599,
-  image: product40,
-  category: 'Necklaces',
-  description:
-    'A sophisticated pearl necklace featuring a central geometric gold-toned pendant set with a deep red ruby stone and sparkling white crystals. Includes matching jhumka-style earrings with emerald green centers.',
-},
-{
-  id: 49,
-  name: 'Peacock Motif Kundan Choker Set',
-  price: 1099,
-  image: product49,
-  category: 'Necklaces',
-  description:
-    'A magnificent traditional choker featuring an ornate central medallion flanked by elegant peacock motifs. Embellished with rich red kundan stones, clear crystals, and delicate pearl drop detailing, accompanied by matching statement earrings.',
-},
+    id: 5,
+    name: 'Heritage Kundan Choker Set',
+    price: 520,
+    image: necklace5,
+    category: 'Necklaces',
+    description: 'A rich heritage choker set featuring beautiful green and red kundan stones, complete with matching earrings for a regal look.',
+  },
+  {
+    id: 6,
+    name: 'Pearl Drop Gold Necklace',
+    price: 450,
+    image: necklace6,
+    category: 'Necklaces',
+    description: 'A graceful gold necklace featuring elegant pearl-like beadwork, bringing a classic and timeless charm to your ensemble.',
+  },
+  {
+    id: 7,
+    name: 'Traditional Coin Gold Necklace',
+    price: 490,
+    image: necklace7,
+    category: 'Necklaces',
+    description: 'A gorgeous traditional gold necklace featuring elegant coin motifs, blending heritage design with modern wearability.',
+  },
+  {
+    id: 8,
+    name: 'Elegant Diamond-Cut Chain',
+    price: 400,
+    image: necklace8,
+    category: 'Necklaces',
+    description: 'A beautifully textured diamond-cut chain that catches the light, adding a subtle sparkle to both casual and formal outfits.',
+  },
+  {
+    id: 9,
+    name: 'Delicate Layered Gold Chain',
+    price: 320,
+    image: necklace9,
+    category: 'Necklaces',
+    description: 'A delicate and modern layered chain that offers a sophisticated, minimalist look for daily wear.',
+  },
+  {
+    id: 10,
+    name: 'Royal Black & Gold Statement',
+    price: 600,
+    image: necklace10,
+    category: 'Necklaces',
+    description: 'A bold and striking statement necklace combining deep black stones with intricate gold work, designed to turn heads.',
+  },
+  {
+    id: 11,
+    name: 'Antique Green Stone Choker',
+    price: 530,
+    image: necklace11,
+    category: 'Necklaces',
+    description: 'A striking antique-finish necklace featuring deep green stones and gold accents, offering a perfect blend of tradition and style.',
+  },
+  {
+    id: 12,
+    name: 'Gold Medallion Choker Set',
+    price: 480,
+    image: necklace12,
+    category: 'Necklaces',
+    description: 'A gorgeous medallion-style choker set with matching earrings, perfect for adding a touch of festive glamour to your look.',
+  },
+  {
+    id: 13,
+    name: 'Black Pendant Silver Chain',
+    price: 380,
+    image: necklace13,
+    category: 'Necklaces',
+    description: 'A unique and modern silver chain featuring a bold black statement pendant, ideal for contemporary styling.',
+  },
+  {
+    id: 14,
+    name: 'Minimal Heart Gold Chain',
+    price: 310,
+    image: necklace14,
+    category: 'Necklaces',
+    description: 'A sleek and minimal gold chain with a delicate heart pendant, an essential piece for daily wear and effortless elegance.',
+  },
+
+  // --- 6 JEWELLERY SETS ---
+  {
+    id: 15,
+    name: 'Midnight Black & Gold Set',
+    price: 580,
+    image: jewellery1,
+    category: 'Jewellery Sets',
+    description: 'A striking black and gold choker set with matching earrings, perfect for an elegant evening look.',
+  },
+  {
+    id: 16,
+    name: 'Elegant Pearl Drop Set',
+    price: 420,
+    image: jewellery2,
+    category: 'Jewellery Sets',
+    description: 'A delicate pearl necklace set that adds a touch of classic sophistication to any outfit.',
+  },
+  {
+    id: 17,
+    name: 'Classic Pearl Choker Set',
+    price: 520,
+    image: jewellery3,
+    category: 'Jewellery Sets',
+    description: 'A timeless pearl choker with matching stud earrings, ideal for bridal and formal events.',
+  },
+  {
+    id: 18,
+    name: 'Royal Sapphire Blue Set',
+    price: 590,
+    image: jewellery4,
+    category: 'Jewellery Sets',
+    description: 'A regal blue stone necklace set that exudes elegance and charm for special occasions.',
+  },
+  {
+    id: 19,
+    name: 'Crimson Ruby Bridal Set',
+    price: 600,
+    image: jewellery5,
+    category: 'Jewellery Sets',
+    description: 'A stunning ruby-red necklace set worn by the model, perfect for traditional weddings and festivals.',
+  },
+  {
+    id: 20,
+    name: 'Silver Sparkle Diamond Set',
+    price: 460,
+    image: jewellery6,
+    category: 'Jewellery Sets',
+    description: 'A dazzling silver-toned necklace set featuring sparkling stones for a glamorous, modern look.',
+  },
+
+  // --- 6 EARRINGS ---
+  {
+    id: 21,
+    name: 'Sparkling Silver Chandelier Earrings',
+    price: 450,
+    image: earring1,
+    category: 'Earrings',
+    description: 'Elegant silver-toned chandelier earrings adorned with sparkling stones, perfect for evening wear.',
+  },
+  {
+    id: 22,
+    name: 'Classic Gold Diamond Studs',
+    price: 420,
+    image: earring2,
+    category: 'Earrings',
+    description: 'Timeless gold stud earrings featuring a brilliant diamond-like center, ideal for everyday elegance.',
+  },
+  {
+    id: 23,
+    name: 'Emerald Green Drop Earrings',
+    price: 480,
+    image: earring3,
+    category: 'Earrings',
+    description: 'Sophisticated long drop earrings with a stunning green backdrop that exudes vintage charm.',
+  },
+  {
+    id: 24,
+    name: 'Crystal White Bridal Drops',
+    price: 490,
+    image: earring4,
+    category: 'Earrings',
+    description: 'Exquisite white crystal chandelier earrings, beautifully crafted for bridal and festive occasions.',
+  },
+  {
+    id: 25,
+    name: 'Midnight Black Ornate Earrings',
+    price: 460,
+    image: earring5,
+    category: 'Earrings',
+    description: 'Striking black and silver statement earrings with intricate detailing for a bold, glamorous look.',
+  },
+  {
+    id: 26,
+    name: 'Golden Pearl Drop Earrings',
+    price: 440,
+    image: earring6,
+    category: 'Earrings',
+    description: 'Traditional gold-toned earrings featuring delicate pearl drops, adding a touch of classic grace to any outfit.',
+  }
 ];
 
+// Exclude categories that already have real products to prevent fake placeholders
+const placeholderCategories = categories.filter(
+  cat => cat !== 'Necklaces' && cat !== 'Jewellery Sets' && cat !== 'Earrings'
+);
 
 const placeholderProducts = Array.from({ length: 48 }, (_, index) => {
-  const id = index + 4;
-  const category = categories[index % categories.length];
+  const id = index + 27; // Starts after the 26 real products
+  const category = placeholderCategories[index % placeholderCategories.length];
 
   return {
     id,
@@ -133,7 +309,6 @@ const placeholderProducts = Array.from({ length: 48 }, (_, index) => {
 });
 
 const products = [...originalProducts, ...placeholderProducts];
-
 
 function ProductImage({ product, className = '' }) {
   if (product.image) {
@@ -154,7 +329,6 @@ function ProductImage({ product, className = '' }) {
     </div>
   );
 }
-
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -180,9 +354,10 @@ function App() {
     }
   }, []);
 
-
-  const formatPrice = (price) =>
-    '₹' + price.toLocaleString('en-IN');
+  const formatPrice = (price) => {
+    if (price === undefined || price === null) return 'Price coming soon';
+    return '₹' + price.toLocaleString('en-IN');
+  };
 
   const filteredProducts = products.filter((product) => {
     const search = searchTerm.toLowerCase();
@@ -323,16 +498,13 @@ function App() {
 
       {/* HEADER */}
       <header className="header">
-       
-<a href="#home" className="logo">
-  <span className="logo-symbol">
-    <img src={royalLogo} alt="LOUCHANIKE Logo" />
-  </span>
-  <span className="logo-name">LOUCHANIKE</span>
-</a>
+        <a href="#home" className="logo">
+          <span className="logo-symbol">
+            <img src={royalLogo} alt="LOUCHANIKE Logo" />
+          </span>
+          <span className="logo-name">LOUCHANIKE</span>
+        </a>
 
-
-      
         <div className="header-actions">
           <button
             className="header-action"
@@ -395,48 +567,47 @@ function App() {
         <a href="#contact">Contact</a>
       </nav>
 
-<main id="home">
+      <main id="home">
 
-  {/* PRODUCTS */}
-  <section className="products" id="products">
+        {/* PRODUCTS */}
+        <section className="products" id="products">
 
-<div className="category-carousel">
-  <button
-    type="button"
-    className="category-arrow category-arrow-left"
-    onClick={() => scrollCategories(-1)}
-    aria-label="Scroll categories left"
-  >
-    &#10094;
-  </button>
+          <div className="category-carousel">
+            <button
+              type="button"
+              className="category-arrow category-arrow-left"
+              onClick={() => scrollCategories(-1)}
+              aria-label="Scroll categories left"
+            >
+              &#10094;
+            </button>
 
-  <div className="category-circle-track" ref={categoryTrackRef}>
-    {categories.map((category, index) => (
-      <button
-        type="button"
-        className={`category-circle-card ${
-          selectedCategory === category ? 'active' : ''
-        }`}
-        key={category}
-        onClick={() => chooseCategory(category)}
-      >
-        <div className="category-circle-image">
-          <img src={categoryImages[index]} alt={category} />
-        </div>
-        <span className="category-circle-name">{category}</span>
-      </button>
-    ))}
-  </div>
+            <div className="category-circle-track" ref={categoryTrackRef}>
+              {categories.map((category, index) => (
+                <button
+                  type="button"
+                  className={`category-circle-card ${selectedCategory === category ? 'active' : ''
+                    }`}
+                  key={category}
+                  onClick={() => chooseCategory(category)}
+                >
+                  <div className="category-circle-image">
+                    <img src={categoryImages[index]} alt={category} />
+                  </div>
+                  <span className="category-circle-name">{category}</span>
+                </button>
+              ))}
+            </div>
 
-  <button
-    type="button"
-    className="category-arrow category-arrow-right"
-    onClick={() => scrollCategories(1)}
-    aria-label="Scroll categories right"
-  >
-    &#10095;
-  </button>
-</div>
+            <button
+              type="button"
+              className="category-arrow category-arrow-right"
+              onClick={() => scrollCategories(1)}
+              aria-label="Scroll categories right"
+            >
+              &#10095;
+            </button>
+          </div>
 
           <div className="search-box">
             <input
@@ -496,9 +667,8 @@ function App() {
 
                     <button
                       type="button"
-                      className={`wishlist-button ${
-                        isWishlisted(product.id) ? 'saved' : ''
-                      }`}
+                      className={`wishlist-button ${isWishlisted(product.id) ? 'saved' : ''
+                        }`}
                       onClick={() => toggleWishlist(product)}
                       aria-label={
                         isWishlisted(product.id)
