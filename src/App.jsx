@@ -48,7 +48,7 @@ import earring4 from './assets/earring-sets/earring4.png';
 import earring5 from './assets/earring-sets/earring5.png';
 import earring6 from './assets/earring-sets/earring6.png';
 
-// NEW: Bangles Images Imports (8 Images)
+// Bangles Images Imports (8 Images)
 import bangle1 from './assets/bangles-set/bangles1.png';
 import bangle2 from './assets/bangles-set/bangles2.png';
 import bangle3 from './assets/bangles-set/bangles3.png';
@@ -58,7 +58,7 @@ import bangle6 from './assets/bangles-set/bangles6.png';
 import bangle7 from './assets/bangles-set/bangles7.png';
 import bangle8 from './assets/bangles-set/bangles8.png';
 
-// NEW: Bracelets Images Imports (10 Images)
+// Bracelets Images Imports (10 Images)
 import bracelet1 from './assets/bracelets.png/bracelets1.png';
 import bracelet2 from './assets/bracelets.png/bracelets2.png';
 import bracelet3 from './assets/bracelets.png/bracelets3.png';
@@ -69,6 +69,62 @@ import bracelet7 from './assets/bracelets.png/bracelets7.png';
 import bracelet8 from './assets/bracelets.png/bracelets8.png';
 import bracelet9 from './assets/bracelets.png/bracelets9.png';
 import bracelet10 from './assets/bracelets.png/bracelets10.png';
+
+// NEW: Rings Images Imports (12 Images)
+import ring1 from './assets/ring sets/ring1.png';
+import ring2 from './assets/ring sets/ring2.png';
+import ring3 from './assets/ring sets/ring3.png';
+import ring4 from './assets/ring sets/ring4.png';
+import ring5 from './assets/ring sets/ring5.png';
+import ring6 from './assets/ring sets/ring6.png';
+import ring7 from './assets/ring sets/ring7.png';
+import ring8 from './assets/ring sets/ring8.png';
+import ring9 from './assets/ring sets/ring9.png';
+import ring10 from './assets/ring sets/ring10.png';
+import ring11 from './assets/ring sets/ring11.png';
+import ring12 from './assets/ring sets/ring12.png';
+
+// NEW: Mangalsutra Images Imports (12 Images)
+import mangalsutra1 from './assets/mangalsutra sets/mangalsutra1.png';
+import mangalsutra2 from './assets/mangalsutra sets/mangalsutra2.png';
+import mangalsutra3 from './assets/mangalsutra sets/mangalsutra3.png';
+import mangalsutra4 from './assets/mangalsutra sets/mangalsutra4.png';
+import mangalsutra5 from './assets/mangalsutra sets/mangalsutra5.png';
+import mangalsutra6 from './assets/mangalsutra sets/mangalsutra6.png';
+import mangalsutra7 from './assets/mangalsutra sets/mangalsutra7.png';
+import mangalsutra8 from './assets/mangalsutra sets/mangalsutra8.png';
+import mangalsutra9 from './assets/mangalsutra sets/mangalsutra9.png';
+import mangalsutra10 from './assets/mangalsutra sets/mangalsutra10.png';
+import mangalsutra11 from './assets/mangalsutra sets/mangalsutra11.png';
+import mangalsutra12 from './assets/mangalsutra sets/mangalsutra12.png';
+
+// NEW: Bridal Jewellery Images Imports (12 Images)
+import bridal1 from './assets/bridal-jewellery sets/bridal1.png';
+import bridal2 from './assets/bridal-jewellery sets/bridal2.png';
+import bridal3 from './assets/bridal-jewellery sets/bridal3.png';
+import bridal4 from './assets/bridal-jewellery sets/bridal4.png';
+import bridal5 from './assets/bridal-jewellery sets/bridal5.png';
+import bridal6 from './assets/bridal-jewellery sets/bridal6.png';
+import bridal7 from './assets/bridal-jewellery sets/bridal7.png';
+import bridal8 from './assets/bridal-jewellery sets/bridal8.png';
+import bridal9 from './assets/bridal-jewellery sets/bridal9.png';
+import bridal10 from './assets/bridal-jewellery sets/bridal10.png';
+import bridal11 from './assets/bridal-jewellery sets/bridal11.png';
+import bridal12 from './assets/bridal-jewellery sets/bridal12.png';
+
+// NEW: Anklets Images Imports (12 Images)
+import anklet1 from './assets/anklets sets/anklets1.png';
+import anklet2 from './assets/anklets sets/anklets2.png';
+import anklet3 from './assets/anklets sets/anklets3.png';
+import anklet4 from './assets/anklets sets/anklets4.png';
+import anklet5 from './assets/anklets sets/anklets5.png';
+import anklet6 from './assets/anklets sets/anklets6.png';
+import anklet7 from './assets/anklets sets/anklets7.png';
+import anklet8 from './assets/anklets sets/anklets8.png';
+import anklet9 from './assets/anklets sets/anklets9.png';
+import anklet10 from './assets/anklets sets/anklets10.png';
+import anklet11 from './assets/anklets sets/anklets11.png';
+import anklet12 from './assets/anklets sets/anklets12.png';
 
 const categories = [
   'Necklaces',
@@ -374,6 +430,8 @@ const originalProducts = [
     category: 'Bangles',
     description: 'A gorgeous gold bangle featuring delicate green stone accents and elegant leaf motifs.',
   },
+
+  // --- 10 BRACELETS ---
   {
     id: 35,
     name: 'Golden Grace Chain Bracelet',
@@ -382,102 +440,474 @@ const originalProducts = [
     category: 'Bracelets',
     description: 'A delicate gold-toned chain bracelet featuring subtle dark bead accents, perfect for adding a touch of everyday elegance.',
   },
-{
-  id: 36,
-  name: 'Classic Solitaire Silver Bracelet',
-  price: 450,
-  image: bracelet2,
-  category: 'Bracelets',
-  description: 'An elegant silver-toned bracelet featuring a brilliant central stone, offering a timeless and sophisticated look.',
-},
-{
-  id: 37,
-  name: 'Sparkling Crystal Tennis Bracelet',
-  price: 520,
-  image: bracelet3,
-  category: 'Bracelets',
-  description: 'A stunning classic tennis bracelet adorned with sparkling crystals, designed to catch the light beautifully for evening wear.',
-},
-{
-  id: 38,
-  name: 'Minimalist Silver Link Bracelet',
-  price: 340,
-  image: bracelet4,
-  category: 'Bracelets',
-  description: 'A sleek and minimalist silver link bracelet, ideal for daily wear or layering with your favorite accessories.',
-},
-{
-  id: 39,
-  name: 'Twisted Elegance Silver Bracelet',
-  price: 390,
-  image: bracelet5,
-  category: 'Bracelets',
-  description: 'A beautifully crafted silver bracelet featuring a twisted rope design that adds texture and modern flair to any outfit.',
-},
-{
-  id: 40,
-  name: 'Emerald Green Beaded Bracelet',
-  price: 420,
-  image: bracelet6,
-  category: 'Bracelets',
-  description: 'A striking bracelet featuring deep green stones and gold accents, bringing a vibrant pop of color to your jewellery collection.',
-},
-{
-  id: 41,
-  name: 'Delicate Pearl Gold Chain',
-  price: 360,
-  image: bracelet7,
-  category: 'Bracelets',
-  description: 'A graceful gold chain bracelet dotted with delicate pearl-like accents, exuding classic charm and femininity.',
-},
-{
-  id: 42,
-  name: 'Timeless Silver Chain Bracelet',
-  price: 330,
-  image: bracelet8,
-  category: 'Bracelets',
-  description: 'A versatile and classic silver chain bracelet that serves as a perfect staple piece for any jewellery lover.',
-},
-{
-  id: 43,
-  name: 'Golden Crescent Charm Bracelet',
-  price: 410,
-  image: bracelet9,
-  category: 'Bracelets',
-  description: 'A unique gold-toned bracelet featuring a distinct curved charm design, perfect for a subtle statement.',
-},
-{
-  id: 44,
-  name: 'Textured Woven Silver Bracelet',
-  price: 370,
-  image: bracelet10,
-  category: 'Bracelets',
-  description: 'A beautifully textured silver-toned bracelet with a woven pattern, adding a touch of intricate elegance to your wrist.',
-},
+  {
+    id: 36,
+    name: 'Classic Solitaire Silver Bracelet',
+    price: 450,
+    image: bracelet2,
+    category: 'Bracelets',
+    description: 'An elegant silver-toned bracelet featuring a brilliant central stone, offering a timeless and sophisticated look.',
+  },
+  {
+    id: 37,
+    name: 'Sparkling Crystal Tennis Bracelet',
+    price: 520,
+    image: bracelet3,
+    category: 'Bracelets',
+    description: 'A stunning classic tennis bracelet adorned with sparkling crystals, designed to catch the light beautifully for evening wear.',
+  },
+  {
+    id: 38,
+    name: 'Minimalist Silver Link Bracelet',
+    price: 340,
+    image: bracelet4,
+    category: 'Bracelets',
+    description: 'A sleek and minimalist silver link bracelet, ideal for daily wear or layering with your favorite accessories.',
+  },
+  {
+    id: 39,
+    name: 'Twisted Elegance Silver Bracelet',
+    price: 390,
+    image: bracelet5,
+    category: 'Bracelets',
+    description: 'A beautifully crafted silver bracelet featuring a twisted rope design that adds texture and modern flair to any outfit.',
+  },
+  {
+    id: 40,
+    name: 'Emerald Green Beaded Bracelet',
+    price: 420,
+    image: bracelet6,
+    category: 'Bracelets',
+    description: 'A striking bracelet featuring deep green stones and gold accents, bringing a vibrant pop of color to your jewellery collection.',
+  },
+  {
+    id: 41,
+    name: 'Delicate Pearl Gold Chain',
+    price: 360,
+    image: bracelet7,
+    category: 'Bracelets',
+    description: 'A graceful gold chain bracelet dotted with delicate pearl-like accents, exuding classic charm and femininity.',
+  },
+  {
+    id: 42,
+    name: 'Timeless Silver Chain Bracelet',
+    price: 330,
+    image: bracelet8,
+    category: 'Bracelets',
+    description: 'A versatile and classic silver chain bracelet that serves as a perfect staple piece for any jewellery lover.',
+  },
+  {
+    id: 43,
+    name: 'Golden Crescent Charm Bracelet',
+    price: 410,
+    image: bracelet9,
+    category: 'Bracelets',
+    description: 'A unique gold-toned bracelet featuring a distinct curved charm design, perfect for a subtle statement.',
+  },
+  {
+    id: 44,
+    name: 'Textured Woven Silver Bracelet',
+    price: 370,
+    image: bracelet10,
+    category: 'Bracelets',
+    description: 'A beautifully textured silver-toned bracelet with a woven pattern, adding a touch of intricate elegance to your wrist.',
+  },
+
+  // --- 12 RINGS (Price: 300 - 400) ---
+  {
+    id: 45,
+    name: 'Classic Silver Solitaire Ring',
+    price: 350,
+    image: ring1,
+    category: 'Rings',
+    description: 'A breathtaking silver-toned ring featuring a brilliant solitaire stone, perfect for engagements or special occasions.',
+  },
+  {
+    id: 46,
+    name: 'Golden Floral Accent Ring',
+    price: 320,
+    image: ring2,
+    category: 'Rings',
+    description: 'A delicate gold ring with a beautiful floral motif, adding a touch of nature-inspired elegance to your hand.',
+  },
+  {
+    id: 47,
+    name: 'Vintage Emerald Statement Ring',
+    price: 400,
+    image: ring3,
+    category: 'Rings',
+    description: 'A striking vintage-style gold ring featuring a vivid emerald green stone surrounded by intricate detailing.',
+  },
+  {
+    id: 48,
+    name: 'Crystal Halo Silver Ring',
+    price: 380,
+    image: ring4,
+    category: 'Rings',
+    description: 'An elegant silver ring boasting a central crystal surrounded by a sparkling halo of smaller stones.',
+  },
+  {
+    id: 49,
+    name: 'Rose Gold Twisted Band',
+    price: 310,
+    image: ring5,
+    category: 'Rings',
+    description: 'A minimalist rose gold-toned band with a gentle twist, perfect for stacking or wearing alone.',
+  },
+  {
+    id: 50,
+    name: 'Royal Sapphire Blue Ring',
+    price: 390,
+    image: ring6,
+    category: 'Rings',
+    description: 'A regal gold ring featuring a deep blue sapphire-like stone, exuding classic sophistication.',
+  },
+  {
+    id: 51,
+    name: 'Regal Green Gemstone Ring',
+    price: 370,
+    image: ring7,
+    category: 'Rings',
+    description: 'A thick gold band ring featuring a bold green gemstone center, designed to make a statement.',
+  },
+  {
+    id: 52,
+    name: 'Art Deco Silver Ring',
+    price: 340,
+    image: ring8,
+    category: 'Rings',
+    description: 'A geometric silver ring inspired by Art Deco designs, offering a modern yet timeless look.',
+  },
+  {
+    id: 53,
+    name: 'Elegant Gold Knot Ring',
+    price: 330,
+    image: ring9,
+    category: 'Rings',
+    description: 'A beautifully crafted gold ring with a delicate knot design, symbolizing eternal elegance.',
+  },
+  {
+    id: 54,
+    name: 'Ruby Red Cocktail Ring',
+    price: 400,
+    image: ring10,
+    category: 'Rings',
+    description: 'A bold cocktail ring featuring a striking ruby-red stone, perfect for evening events and parties.',
+  },
+  {
+    id: 55,
+    name: 'Pearl Cluster Gold Ring',
+    price: 360,
+    image: ring11,
+    category: 'Rings',
+    description: 'A luxurious gold ring adorned with a cluster of delicate pearl-like stones for a classic look.',
+  },
+  {
+    id: 56,
+    name: 'Sparkling Silver Eternity Ring',
+    price: 380,
+    image: ring12,
+    category: 'Rings',
+    description: 'A gorgeous silver eternity ring fully encrusted with sparkling stones, symbolizing endless beauty.',
+  },
+
+  // --- 12 MANGALSUTRA (Price: 400 - 500) ---
+  {
+    id: 57,
+    name: 'Traditional Black Bead Mangalsutra',
+    price: 450,
+    image: mangalsutra1,
+    category: 'Mangalsutra',
+    description: 'A classic and elegant mangalsutra featuring traditional black beads and a beautiful gold pendant.',
+  },
+  {
+    id: 58,
+    name: 'Diamond Pendant Mangalsutra',
+    price: 500,
+    image: mangalsutra2,
+    category: 'Mangalsutra',
+    description: 'A modern take on the traditional mangalsutra, featuring a stunning diamond-like pendant on a black bead chain.',
+  },
+  {
+    id: 59,
+    name: 'Floral Gold Mangalsutra',
+    price: 480,
+    image: mangalsutra3,
+    category: 'Mangalsutra',
+    description: 'A beautifully designed mangalsutra with a delicate floral gold pendant, perfect for daily wear.',
+  },
+  {
+    id: 60,
+    name: 'Short Layer Mangalsutra',
+    price: 420,
+    image: mangalsutra4,
+    category: 'Mangalsutra',
+    description: 'A stylish short-layered mangalsutra that blends traditional values with modern aesthetics.',
+  },
+  {
+    id: 61,
+    name: 'Antique Finish Mangalsutra',
+    price: 460,
+    image: mangalsutra5,
+    category: 'Mangalsutra',
+    description: 'A beautifully crafted mangalsutra with an antique gold finish, adding a touch of heritage to your look.',
+  },
+  {
+    id: 62,
+    name: 'Dual Chain Mangalsutra',
+    price: 490,
+    image: mangalsutra6,
+    category: 'Mangalsutra',
+    description: 'A unique dual-chain mangalsutra featuring intricate gold work and classic black beads.',
+  },
+  {
+    id: 63,
+    name: 'Minimalist Gold Mangalsutra',
+    price: 400,
+    image: mangalsutra7,
+    category: 'Mangalsutra',
+    description: 'A sleek, minimalist mangalsutra with a small gold pendant, ideal for everyday elegance.',
+  },
+  {
+    id: 64,
+    name: 'Traditional Vati Mangalsutra',
+    price: 470,
+    image: mangalsutra8,
+    category: 'Mangalsutra',
+    description: 'A traditional Maharashtrian-style mangalsutra featuring the classic vati (bowl) design.',
+  },
+  {
+    id: 65,
+    name: 'Ornate Gold Pendant Mangalsutra',
+    price: 495,
+    image: mangalsutra9,
+    category: 'Mangalsutra',
+    description: 'A rich mangalsutra featuring an intricately designed ornate gold pendant.',
+  },
+  {
+    id: 66,
+    name: 'Layered Chain Mangalsutra',
+    price: 440,
+    image: mangalsutra10,
+    category: 'Mangalsutra',
+    description: 'A contemporary layered mangalsutra that adds a modern twist to a traditional piece.',
+  },
+  {
+    id: 67,
+    name: 'Classic Gold & Black Mangalsutra',
+    price: 430,
+    image: mangalsutra11,
+    category: 'Mangalsutra',
+    description: 'A timeless piece featuring the perfect balance of gold and black beads, suited for all occasions.',
+  },
+  {
+    id: 68,
+    name: 'Bridal Gold Mangalsutra',
+    price: 500,
+    image: mangalsutra12,
+    category: 'Mangalsutra',
+    description: 'A heavy, bridal-style mangalsutra with elaborate gold detailing for your most special day.',
+  },
+
+  // --- 12 BRIDAL JEWELLERY (Price: 1100 - 1200) ---
+  {
+    id: 69,
+    name: 'Royal Kundan Bridal Set',
+    price: 1200,
+    image: bridal1,
+    category: 'Bridal Jewellery',
+    description: 'A magnificent bridal set featuring heavy Kundan work, perfect for the modern royal bride.',
+  },
+  {
+    id: 70,
+    name: 'Emerald Bridal Choker Set',
+    price: 1150,
+    image: bridal2,
+    category: 'Bridal Jewellery',
+    description: 'A stunning bridal choker set adorned with vibrant emerald green stones and gold accents.',
+  },
+  {
+    id: 71,
+    name: 'Heritage Polki Bridal Set',
+    price: 1180,
+    image: bridal3,
+    category: 'Bridal Jewellery',
+    description: 'An exquisite heritage bridal set featuring uncut Polki stones and intricate gold craftsmanship.',
+  },
+  {
+    id: 72,
+    name: 'Pearl & Gold Bridal Set',
+    price: 1100,
+    image: bridal4,
+    category: 'Bridal Jewellery',
+    description: 'A graceful bridal set combining classic pearls with detailed gold work for an elegant look.',
+  },
+  {
+    id: 73,
+    name: 'Midnight Black Bridal Set',
+    price: 1190,
+    image: bridal5,
+    category: 'Bridal Jewellery',
+    description: 'A bold and striking bridal set featuring deep black stones set against bright gold.',
+  },
+  {
+    id: 74,
+    name: 'Traditional Temple Bridal Set',
+    price: 1200,
+    image: bridal6,
+    category: 'Bridal Jewellery',
+    description: 'A heavy temple-style bridal set with intricate motifs and vibrant stone accents.',
+  },
+  {
+    id: 75,
+    name: 'Ruby Red Bridal Necklace',
+    price: 1170,
+    image: bridal7,
+    category: 'Bridal Jewellery',
+    description: 'A breathtaking bridal necklace set featuring rich ruby-red stones and matching earrings.',
+  },
+  {
+    id: 76,
+    name: 'Antique Gold Bridal Set',
+    price: 1160,
+    image: bridal8,
+    category: 'Bridal Jewellery',
+    description: 'A majestic antique gold finish bridal set, perfect for traditional wedding ceremonies.',
+  },
+  {
+    id: 77,
+    name: 'Royal Blue Sapphire Bridal Set',
+    price: 1195,
+    image: bridal9,
+    category: 'Bridal Jewellery',
+    description: 'A luxurious bridal set featuring deep blue sapphire stones and exquisite gold detailing.',
+  },
+  {
+    id: 78,
+    name: 'Diamond-Cut Bridal Choker',
+    price: 1140,
+    image: bridal10,
+    category: 'Bridal Jewellery',
+    description: 'A brilliant diamond-cut bridal choker set that catches the light beautifully.',
+  },
+  {
+    id: 79,
+    name: 'Pastel Green Bridal Set',
+    price: 1120,
+    image: bridal11,
+    category: 'Bridal Jewellery',
+    description: 'A unique and elegant bridal set featuring soft pastel green stones for a modern bride.',
+  },
+  {
+    id: 80,
+    name: 'Kundan & Emerald Bridal Set',
+    price: 1200,
+    image: bridal12,
+    category: 'Bridal Jewellery',
+    description: 'A masterpiece bridal set combining traditional Kundan work with rich emerald green stones.',
+  },
+
+  // --- 12 ANKLETS (Price: 380 - 450) ---
+  {
+    id: 81,
+    name: 'Silver Charm Anklet',
+    price: 380,
+    image: anklet1,
+    category: 'Anklets',
+    description: 'A delicate silver anklet adorned with small, elegant charms.',
+  },
+  {
+    id: 82,
+    name: 'Classic Silver Chain Payal',
+    price: 390,
+    image: anklet2,
+    category: 'Anklets',
+    description: 'A traditional silver payal with a classic chain design, perfect for daily wear.',
+  },
+  {
+    id: 83,
+    name: 'Crystal Drop Anklet',
+    price: 420,
+    image: anklet3,
+    category: 'Anklets',
+    description: 'A beautiful anklet featuring sparkling crystal drops that add a touch of glamour.',
+  },
+  {
+    id: 84,
+    name: 'Diamond-Cut Silver Anklet',
+    price: 400,
+    image: anklet4,
+    category: 'Anklets',
+    description: 'A shimmering silver anklet with a diamond-cut texture that reflects light beautifully.',
+  },
+  {
+    id: 85,
+    name: 'Floral Motif Silver Anklet',
+    price: 410,
+    image: anklet5,
+    category: 'Anklets',
+    description: 'An elegant anklet featuring delicate floral motifs, perfect for a feminine look.',
+  },
+  {
+    id: 86,
+    name: 'Layered Silver Anklet',
+    price: 430,
+    image: anklet6,
+    category: 'Anklets',
+    description: 'A trendy layered anklet that adds a bohemian touch to your style.',
+  },
+  {
+    id: 87,
+    name: 'Black Bead Silver Anklet',
+    price: 385,
+    image: anklet7,
+    category: 'Anklets',
+    description: 'A stylish anklet combining silver chains with black beads for a modern look.',
+  },
+  {
+    id: 88,
+    name: 'Traditional Ghungroo Payal',
+    price: 440,
+    image: anklet8,
+    category: 'Anklets',
+    description: 'A classic payal featuring traditional ghungroo (bells) that chime beautifully as you walk.',
+  },
+  {
+    id: 89,
+    name: 'Ornate Silver Payal',
+    price: 450,
+    image: anklet9,
+    category: 'Anklets',
+    description: 'A heavy and ornate silver payal with intricate detailing, ideal for festive occasions.',
+  },
+  {
+    id: 90,
+    name: 'Pearl Accent Anklet',
+    price: 425,
+    image: anklet10,
+    category: 'Anklets',
+    description: 'A graceful anklet adorned with delicate pearl-like stones, adding a touch of elegance.',
+  },
+  {
+    id: 91,
+    name: 'Emerald Green Bead Anklet',
+    price: 415,
+    image: anklet11,
+    category: 'Anklets',
+    description: 'A vibrant anklet featuring emerald green beads set in silver-toned metal.',
+  },
+  {
+    id: 92,
+    name: 'Bridal Silver Payal Set',
+    price: 450,
+    image: anklet12,
+    category: 'Anklets',
+    description: 'A matching pair of heavy silver payals designed for brides and special occasions.',
+  },
 ];
 
-// Exclude categories that already have real products to prevent fake placeholders
-const placeholderCategories = categories.filter(
-  cat => cat !== 'Necklaces' && cat !== 'Jewellery Sets' && cat !== 'Earrings' && cat !== 'Bangles' && cat !== 'Bracelets'
-);
-
-const placeholderProducts = Array.from({ length: 48 }, (_, index) => {
-  const id = index + 45; // Starts after the 44 real products
-  // ...// Starts after the 34 real products
-  const category = placeholderCategories[index % placeholderCategories.length];
-
-  return {
-    id,
-    name: `${category} Design ${String(id).padStart(2, '0')}`,
-    price: 0,
-    image: null,
-    category,
-    description: 'Product description will be added soon.',
-    isPlaceholder: true,
-  };
-});
-
-const products = [...originalProducts, ...placeholderProducts];
+// Since all categories now have real products, placeholders are removed
+const products = originalProducts;
 
 function ProductImage({ product, className = '' }) {
   if (product.image) {
@@ -549,11 +979,6 @@ function App() {
   });
 
   const addToCart = (product) => {
-    if (product.isPlaceholder) {
-      alert('This product is not available yet. Please add its image and price first.');
-      return;
-    }
-
     setCart((currentCart) => {
       const existing = currentCart.find(
         (item) => item.id === product.id
@@ -613,12 +1038,8 @@ function App() {
       '#product-' +
       product.id;
 
-    const priceText = product.isPlaceholder
-      ? 'Price coming soon'
-      : formatPrice(product.price);
-
     const shareText =
-      `✨ ${product.name}\nPrice: ${priceText}\n\n` +
+      `✨ ${product.name}\nPrice: ${formatPrice(product.price)}\n\n` +
       `LOUCHANIKE | ROYAL BLOOM\n` +
       `ELEGANCE IN EVERY DETAIL\n\nShop here: ${shareUrl}`;
 
@@ -865,9 +1286,7 @@ function App() {
                     </div>
 
                     <p className="product-price">
-                      {product.isPlaceholder
-                        ? 'Price coming soon'
-                        : formatPrice(product.price)}
+                      {formatPrice(product.price)}
                     </p>
 
                     <button
@@ -882,7 +1301,6 @@ function App() {
                       type="button"
                       className="shop-button product-add-button"
                       onClick={() => addToCart(product)}
-                      disabled={product.isPlaceholder}
                     >
                       ADD TO CART
                     </button>
@@ -891,7 +1309,6 @@ function App() {
                       type="button"
                       className="view-button"
                       onClick={() => addToCart(product)}
-                      disabled={product.isPlaceholder}
                     >
                       BUY NOW
                     </button>
@@ -1033,25 +1450,21 @@ function App() {
             <h2>{selectedProduct.name}</h2>
 
             <h3 className="product-price">
-              {selectedProduct.isPlaceholder
-                ? 'Price coming soon'
-                : formatPrice(selectedProduct.price)}
+              {formatPrice(selectedProduct.price)}
             </h3>
 
             <p>{selectedProduct.description}</p>
 
-            {!selectedProduct.isPlaceholder && (
-              <button
-                type="button"
-                className="shop-button"
-                onClick={() => {
-                  addToCart(selectedProduct);
-                  setSelectedProduct(null);
-                }}
-              >
-                ADD TO CART
-              </button>
-            )}
+            <button
+              type="button"
+              className="shop-button"
+              onClick={() => {
+                addToCart(selectedProduct);
+                setSelectedProduct(null);
+              }}
+            >
+              ADD TO CART
+            </button>
 
             <button
               type="button"
@@ -1105,24 +1518,18 @@ function App() {
 
                     <div className="cart-item-info">
                       <h3>{item.name}</h3>
-                      <p>
-                        {item.isPlaceholder
-                          ? 'Price coming soon'
-                          : formatPrice(item.price)}
-                      </p>
+                      <p>{formatPrice(item.price)}</p>
 
-                      {!item.isPlaceholder && (
-                        <button
-                          type="button"
-                          className="shop-button"
-                          onClick={() => {
-                            addToCart(item);
-                            setWishlistOpen(false);
-                          }}
-                        >
-                          ADD TO CART
-                        </button>
-                      )}
+                      <button
+                        type="button"
+                        className="shop-button"
+                        onClick={() => {
+                          addToCart(item);
+                          setWishlistOpen(false);
+                        }}
+                      >
+                        ADD TO CART
+                      </button>
 
                       <button
                         type="button"
@@ -1140,7 +1547,7 @@ function App() {
         </div>
       )}
 
-      {/* SHOPPING CART */}
+      {/* SHOPPING CART (Fixed Duplication Bug) */}
       {cartOpen && (
         <div
           className="cart-overlay"
