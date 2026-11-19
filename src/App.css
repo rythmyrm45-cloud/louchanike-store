@@ -111,7 +111,7 @@ img {
 }
 
 /* ========================================
-   3. HEADER (FINAL FLEX LAYOUT)
+   3. HEADER
 ======================================== */
 
 .header {
@@ -127,7 +127,6 @@ img {
   gap: 15px;
 }
 
-/* Logo block */
 .header .logo {
   display: flex;
   flex-direction: row;
@@ -178,7 +177,6 @@ img {
   display: none;
 }
 
-/* Right-side actions */
 .header .header-actions {
   display: flex;
   flex-direction: row;
@@ -275,7 +273,7 @@ img {
 }
 
 /* ========================================
-   5. HERO (IMAGE REMOVED)
+   5. HERO
 ======================================== */
 
 .hero {
@@ -408,7 +406,7 @@ img {
 }
 
 /* ========================================
-   8. COLLECTIONS SECTION (hidden legacy grid)
+   8. COLLECTIONS SECTION
 ======================================== */
 
 .collections {
@@ -1169,38 +1167,40 @@ footer > small {
 }
 
 /* ========================================
-   17. PRODUCT DETAILS MODAL
+   17. PRODUCT DETAILS MODAL (FULLSCREEN)
 ======================================== */
 
 .details-overlay {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: rgba(0, 0, 0, 0.72);
+  background: var(--white);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 20px;
+  padding: 0;
   overflow-y: auto;
 }
 
 .details {
   position: relative;
-  background: #fff;
+  background: var(--white);
   width: 100%;
-  max-width: 520px;
-  max-height: 90vh;
-  overflow-y: auto;
-  padding: 30px;
-  border-radius: 12px;
+  max-width: 1000px;
+  min-height: 100vh;
+  max-height: none;
+  overflow-y: visible;
+  padding: 70px 20px 60px;
+  border-radius: 0;
+  box-shadow: none;
   text-align: center;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
 }
 
 .details-image {
   width: 100%;
-  height: 280px;
-  margin-bottom: 22px;
+  height: 55vh;
+  max-height: 600px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1223,14 +1223,15 @@ footer > small {
   margin: 12px 0;
   color: var(--forest);
   font-family: 'Cormorant Garamond', serif;
-  font-size: 30px;
+  font-size: 36px;
   overflow-wrap: anywhere;
 }
 
 .details > p:not(.eyebrow) {
-  margin: 15px 0 22px;
+  margin: 15px auto 30px;
+  max-width: 600px;
   color: #666;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.8;
 }
 
@@ -1239,23 +1240,28 @@ footer > small {
 .details .share-button {
   display: block;
   width: 100%;
-  margin-top: 12px;
+  max-width: 400px;
+  margin: 12px auto;
   cursor: pointer;
 }
 
 .details .close-cart {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  z-index: 2;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
   border: none;
   background: var(--forest);
   color: white;
-  width: 34px;
-  height: 34px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ========================================
@@ -1668,21 +1674,26 @@ select:focus-visible {
     padding: 30px 16px;
   }
 
-  .details-overlay {
-    padding: 12px;
-  }
-
+  /* Mobile Fullscreen Product Details Adjustments */
   .details {
-    padding: 22px 16px;
-    max-height: 92vh;
+    padding: 60px 15px 50px; 
   }
 
   .details-image {
-    height: 220px;
+    height: 45vh;
+    margin-bottom: 20px;
   }
 
   .details h2 {
-    font-size: 24px;
+    font-size: 28px;
+  }
+
+  .details .close-cart {
+    top: 15px;
+    right: 15px;
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
   }
 }
 
@@ -1773,5 +1784,48 @@ select:focus-visible {
   .share-button {
     min-height: 40px;
     font-size: 8px;
+  }
+}
+
+/* ========================================
+   23. RELATED PRODUCTS & MODAL FOOTER
+======================================== */
+
+.related-products-section {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+  width: 100%;
+}
+
+/* Override standard product grid for the fullscreen modal to fit better */
+.related-products-section .product-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 30px;
+}
+
+/* Modal Footer edge-to-edge override */
+.modal-footer {
+  margin: 60px -20px -60px -20px; /* Pulls footer to the absolute edges of the modal */
+  width: calc(100% + 40px);
+  border-radius: 0;
+}
+
+/* Responsive Adjustments for New Sections */
+@media (max-width: 950px) {
+  .related-products-section .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .related-products-section .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .modal-footer {
+    margin: 50px -15px -50px -15px; /* Matches the mobile .details padding */
+    width: calc(100% + 30px);
   }
 }
